@@ -1,4 +1,4 @@
-module.exports = function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
       resolve({
@@ -9,4 +9,4 @@ module.exports = function getFullResponseFromAPI(success) {
       reject(new Error('The fake API is not working currently'));
     }
   });
-};
+}
