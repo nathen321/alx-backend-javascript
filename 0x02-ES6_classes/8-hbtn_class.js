@@ -21,13 +21,13 @@ export default class HolbertonClass {
   }
 
   [Symbol.toPrimitive](hint) {
-     switch (hint) {
+    switch (hint) {
       case 'string':
-        return this.location;
+        return this;
       case 'number':
         return this.size;
-      case 'default':
-        return this;
+      default:
+        return 'default representation';
     }
   }
 }
