@@ -27,7 +27,7 @@ export default class HolbertonClass {
       case 'number':
         return this.size;
       default:
-        return 'default representation';
+        return this;
     }
   }
 }
