@@ -1,7 +1,7 @@
 export default function getListStudentIds(argument) {
-  if (!Array.isArray(argument)){
-      return []
-  } else {
+  if (argument instanceof Array){
     return argument.map((x) => x['id'])
+  } else {
+    return []
   }
 }
