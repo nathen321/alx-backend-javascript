@@ -1,15 +1,20 @@
 const http = require('http');
 
-// Create a basic HTTP server
-const app  = http.createServer((req, res) => {
-  // Handle requests
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello ALX!');
+const PORT = 1245;
+const HOST = 'localhost';
+const app = http.createServer();
+
+app.on('request', (_, res) => {
+  const responseText = 'Hello ALLX!';
+
+  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Length', responseText.length);
+  res.statusCode = 200;
+  res.write(Buffer.from(responseText));
 });
 
-// Start listening on port 3000
-app.listen(1245, () => {
-  console.log('...');
+app.listen(PORT, HOST, () => {
+  process.stdout.write(`Server listening at -> http://${HOST}:${PORT}\n`);
 });
 
-module.exports(app);
+module.exports = app;
