@@ -2,7 +2,7 @@
  * Displays a message on the STDOUT.
  * @param {String} message The message to display.
  */
-function displayMessage(message) {
+function displayMessage(message: string) {
   console.log(message);
 }
 
