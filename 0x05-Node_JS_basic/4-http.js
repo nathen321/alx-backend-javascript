@@ -4,8 +4,9 @@ const PORT = 1245;
 const HOST = 'localhost';
 const app = http.createServer();
 
+
 app.on('request', (_, res) => {
-  const responseText = 'Hello ALLX!';
+  const responseText = 'Hello Holberton School!';
 
   res.setHeader('Content-Type', 'text/plain');
   res.setHeader('Content-Length', responseText.length);
